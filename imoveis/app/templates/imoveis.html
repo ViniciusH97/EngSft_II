@@ -18,12 +18,20 @@
                 </tr>
             </thead>
             <tbody>
-                {% for imovel in imoveis %}
+                {% for Imovel in imoveis %}
                 <tr>
-                    <td>{{ imovel.nome }}</td>
-                    <td>{{ imovel.tipo_imovel }}</td>
-                    <td>{{ imovel.descricao }}</td>
-                    <td>{{ imovel.area_construida }}</td>
+                    <td>{{ Imovel.nome }}</td>
+                    <td>{{ Imovel.tipo_imovel }}</td>
+                    <td>{{ Imovel.descricao }}</td>
+                    <td>{{ Imovel.area_construida }}</td>
+                    <td>{{ Imovel.quantidade_comodos }}</td>
+                    <td>{{ Imovel.tipo_logradouro}}</td>
+                    <td>{{ Imovel.logradouro}}</td>
+                    <td>{{ Imovel.bairro}}</td>
+                    <td>{{ Imovel.cidade}}</td>
+                    <td>{{ Imovel.uf}}</td>
+                    <td>{{ Imovel.cep}}</td>
+                    <td>{{ Imovel.valor_de_venda}}</td>
                 </tr>
                 {% endfor %}
             </tbody>

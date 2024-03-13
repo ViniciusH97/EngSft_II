@@ -64,7 +64,7 @@ class Pessoa(models.Model):
     data_nasc = models.DateField()
     email = models.EmailField()
     cidade = models.ForeignKey(Cidade, on_delete=models.CASCADE)
-    telefone = models.CharField(max_length=11)
+    telefone = models.CharField(max_length=20)
 
     class Meta:
         verbose_name_plural = "Pessoas"
@@ -101,11 +101,11 @@ class Imovel(models.Model):
         verbose_name_plural = "Imóveis"
 
     def __str__(self):
-        return f'{self.nome} {self.tipo.Imovel} {self.descricao} {self.area.construida} {self.quantidade_comodos} {self.cor} {self.quantidade_vagas_garagem} {self.tipo_logradouro} {self.logradouro} {self.bairro} {self.cidade} {self.uf} {self.cep} {self.valor_de_venda}'    
+        return f'{self.nome} {self.tipo_imovel} {self.descricao} {self.area_construida} {self.quantidade_comodos} {self.cor} {self.quantidade_vagas_garagem} {self.tipo_logradouro} {self.logradouro} {self.bairro} {self.cidade} {self.uf} {self.cep} {self.valor_de_venda}'    
 
 class Locatario(models.Model):
     nome = models.CharField(max_length=30)
-    telefone = models.CharField(max_length=15)  
+    telefone = models.CharField(max_length=20)  
     endereco = models.TextField()  
     email = models.EmailField() 
 

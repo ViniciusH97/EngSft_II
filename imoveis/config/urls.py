@@ -1,8 +1,8 @@
 from django.urls import path
-from django.contrib import admin
 from app.views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("", index.as_view(), name="index"),
+    path('', Index.as_view(), name='index'),  
+    path('login/', LoginView.as_view(), name='login'), 
+    path('logout/', LogoutView.as_view(), name='index.html'),
 ]
