@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Funcionários</title>
+    <title>Imóveis Cadastrados</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Funcionários da Empresa</h1>
+        <h1>Imóveis</h1>
         <table class="table">
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Cargo</th>
-                    <th>Telefone</th>
-                    <th>Salário</th>
+                    <th>Tipo de Imovel</th>
+                    <th>Descrição/th>
+                    <th>Area_construida</th>
                 </tr>
             </thead>
             <tbody>
-                {% for funcionario in funcionarios %}
+                {% for imovel in imoveis %}
                 <tr>
-                    <td>{{ funcionario.pessoa.nome }}</td>
-                    <td>{{ funcionario.cargo }}</td>
-                    <td>{{ funcionario.telefone }}</td>
-                    <td>{{ funcionario.salario }}</td>
+                    <td>{{ imovel.nome }}</td>
+                    <td>{{ imovel.tipo_imovel }}</td>
+                    <td>{{ imovel.descricao }}</td>
+                    <td>{{ imovel.area_construida }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
