@@ -6,32 +6,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+            <a class="navbar-brand me-4" href="#" style="color: white;">Imobiliária Leroy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                </ul>                
+            </div>
+        </div>
+    </nav>
+    
     <div class="container mt-5">
         <h1>Imóveis</h1>
+        <!-- Adicionando o formulário de pesquisa -->
+        <form class="form-inline my-4" action="#" method="GET">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar por nome do imóvel" aria-label="Search" name="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
         <table class="table">
             <thead>
                 <tr>
                     <th>Nome</th>
                     <th>Tipo de Imovel</th>
-                    <th>Descrição/th>
-                    <th>Area_construida</th>
+                    <th>Descrição</th>
+                    <th>Área Construída</th>
                 </tr>
             </thead>
             <tbody>
-                {% for Imovel in imoveis %}
+                {% for imovel in imoveis %}
                 <tr>
-                    <td>{{ Imovel.nome }}</td>
-                    <td>{{ Imovel.tipo_imovel }}</td>
-                    <td>{{ Imovel.descricao }}</td>
-                    <td>{{ Imovel.area_construida }}</td>
-                    <td>{{ Imovel.quantidade_comodos }}</td>
-                    <td>{{ Imovel.tipo_logradouro}}</td>
-                    <td>{{ Imovel.logradouro}}</td>
-                    <td>{{ Imovel.bairro}}</td>
-                    <td>{{ Imovel.cidade}}</td>
-                    <td>{{ Imovel.uf}}</td>
-                    <td>{{ Imovel.cep}}</td>
-                    <td>{{ Imovel.valor_de_venda}}</td>
+                    <td>{{ imovel.nome }}</td>
+                    <td>{{ imovel.tipo_imovel }}</td>
+                    <td>{{ imovel.descricao }}</td>
+                    <td>{{ imovel.area_construida }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -6,8 +6,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+            <a class="navbar-brand me-4" href="#" style="color: white;">Imobiliária Leroy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                </ul>                
+            </div>
+        </div>
+    </nav>
+    
     <div class="container mt-5">
         <h1>Funcionários da Empresa</h1>
+        
+        <form class="form-inline mb-3">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar por nome" aria-label="Pesquisar" id="searchInput">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+        
         <table class="table">
             <thead>
                 <tr>

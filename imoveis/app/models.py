@@ -166,4 +166,5 @@ class Locador(models.Model):
 
     def __str__(self):
         return f'{self.pessoa.nome} {self.pessoa.telefone} {self.imovel.nome} {self.imovel.tipo_imovel}'
+    
 
