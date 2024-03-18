@@ -1,7 +1,6 @@
 from django.db import models
 from app.models import *
 
-
 # Create your models here.
 
 class Cargo(models.Model):
@@ -106,7 +105,7 @@ class Imovel(models.Model):
 class Locatario(models.Model):
     nome = models.CharField(max_length=30)
     telefone = models.CharField(max_length=20)  
-    endereco = models.TextField()  
+    endereco = models.TextField() 
     email = models.EmailField() 
 
     def __str__(self):
@@ -115,9 +114,10 @@ class Locatario(models.Model):
     
 class Vendas_de_imoveis(models.Model):
     nome = models.CharField(max_length=50)
+    valor = models.ForeignKey(Imovel, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.nome
+        return f'{self.nome} {self.valor}' 
 
 class Locacao_de_imovel(models.Model):
     nome = models.CharField(max_length=30)

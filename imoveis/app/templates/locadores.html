@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Funcionários</title>
+    <title>Locadores</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
     </nav>
     
     <div class="container mt-5">
-        <h1>Funcionários da Empresa</h1>
+        <h1>Lista de Locadores</h1>
         
         <form class="form-inline mb-3">
             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar por nome" aria-label="Pesquisar" id="searchInput">
@@ -32,18 +32,18 @@
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Cargo</th>
                     <th>Telefone</th>
-                    <th>Salário</th>
+                    <th>Endereço</th>
+                    <th>E-mail</th>
                 </tr>
             </thead>
             <tbody>
-                {% for funcionario in funcionarios %}
+                {% for locatario in locatarios %}
                 <tr>
-                    <td>{{ funcionario.pessoa.nome }}</td>
-                    <td>{{ funcionario.cargo }}</td>
-                    <td>{{ funcionario.telefone }}</td>
-                    <td>R$ {{ funcionario.salario }}</td>
+                    <td>{{ locatario.pessoa.nome }}</td>
+                    <td>{{ locatario.telefone }}</td>
+                    <td>{{ locatario.dendereco }}</td>
+                    <td>{{ locatario.email }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

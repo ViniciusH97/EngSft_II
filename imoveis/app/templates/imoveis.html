@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Imóveis Cadastrados</title>
@@ -8,7 +8,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container">
-            <a class="navbar-brand me-4" href="#" style="color: white;">Imobiliária Leroy</a>
+            <a class="navbar-brand me-4" href="{% url 'index' %}" style="color: white;">Imobiliária Leroy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,6 @@
     
     <div class="container mt-5">
         <h1>Imóveis</h1>
-        <!-- Adicionando o formulário de pesquisa -->
         <form class="form-inline my-4" action="#" method="GET">
             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar por nome do imóvel" aria-label="Search" name="search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
