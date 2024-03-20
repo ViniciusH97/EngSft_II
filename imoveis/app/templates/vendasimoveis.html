@@ -36,10 +36,10 @@
                 </tr>
             </thead>
             <tbody>
-                {% for venda in vendas %}
+                {% for venda in vendasimoveis %}
                 <tr>
-                    <td>{{ Venda_de_imoveis.pessoa.nome }}</td>
-                    <td>R$ {{ Venda_de_imoveis.valor }}</td>
+                    <td>{{ venda.nome }}</td>
+                    <td>R$ {{ venda.valor }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

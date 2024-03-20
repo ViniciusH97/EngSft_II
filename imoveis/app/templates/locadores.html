@@ -31,19 +31,17 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>Endereço</th>
-                    <th>E-mail</th>
+                    <th>Pessoa</th>
+                    <th>Imóvel</th>
+                    <th>Tipo do Imóvel</th>
                 </tr>
             </thead>
             <tbody>
-                {% for locatario in locatarios %}
+                {% for locador in locadores %}
                 <tr>
-                    <td>{{ locatario.pessoa.nome }}</td>
-                    <td>{{ locatario.telefone }}</td>
-                    <td>{{ locatario.dendereco }}</td>
-                    <td>{{ locatario.email }}</td>
+                    <td>{{ locador.pessoa }}</td>
+                    <td>{{ locador.imovel }}</td>
+                    <td>{{ locador.tipo_imovel }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Contratos</title>
+    <title>Locadores</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
     </nav>
     
     <div class="container mt-5">
-        <h1>Lista de Contrato de Locação ou Vendas</h1>
+        <h1>Lista de Locatarios</h1>
         
         <form class="form-inline mb-3">
             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar por nome" aria-label="Pesquisar" id="searchInput">
@@ -31,19 +31,19 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Locatario</th>
-                    <th>Data do Inicio</th>
-                    <th>Data do Fim</th>
-                    <th>Valor do Aluguel/Venda</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>E-mail</th>
                 </tr>
             </thead>
             <tbody>
-                {% for contrato in contratos %}
+                {% for locatario in locatarios %}
                 <tr>
-                    <td>{{ contrato.locatario }}</td>
-                    <td>{{ contrato.data_inicio }}</td>
-                    <td>{{ contrato.data_fim }}</td>
-                    <td>R$ {{ contrato.valor_do_aluguel }}</td>
+                    <td>{{ locatario.nome }}</td>
+                    <td>{{ locatario.telefone }}</td>
+                    <td>{{ locatario.endereco }}</td>
+                    <td>{{ locatario.email }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
