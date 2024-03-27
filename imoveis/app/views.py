@@ -19,11 +19,8 @@ class LoginView(View):
 
 
         if user is not None:
-            #if user.is_superuser:
             login(request, user)
             return redirect('index')
-           # else:
-               # return render(request, 'login.html', {'error_message': 'Erro: Acesso negado!'})
         else:
             return render(request, 'login.html', {'error_message': 'Erro: Usuário ou senha inválida!'})
         

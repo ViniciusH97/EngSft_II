@@ -153,7 +153,7 @@ class Funcionario(models.Model):
         verbose_name_plural = "Funcionários"
 
     def __str__(self):
-        return f'Funcionário: {self.pessoa.nome}'
+        return f'Funcionário: {self.pessoa.nome} {self.pessoa.telefone}'
 
 
 class Locador(models.Model):
